@@ -42,18 +42,42 @@
 	<form>
 		<fieldset>
 			<label><strong>Keybase Username</strong></label>
-			<input type="text" placeholder="KeybaseApp"/>
-			<label><strong>Keybase Password</strong></label>
-			<input type="text" placeholder="hello@keybaseapp.com"/>
+			<input id="login-username" type="text" placeholder="KeybaseApp"/>
 			<div class="space10"></div>
 			<a id="login" class="radius button" href="#">Login</a>
 
 		</fieldset>
 </form>
 
-<a class="close-reveal-modal"><i class="foundicon1-remove"></i></a>
+<a class="close-reveal-modal" id="closelogin">X</a>
+<a style="display:none;" data-reveal-id="verifylogin" id="openlogin"></a>
 </div>
 <!-- Modal Section -Login -->
+
+<!-- Modal Section -Login-Confirm -->
+<div id="verifylogin" class="reveal-modal">
+	<h3>Verify Login</h3>
+	<p>To securely verify your login, please follow these steps.</p>
+	<ul>
+		<li>1. Copy the message below.</li>
+		<li>2. Sign the message using this <a target="_blank" href="https://keybase.io/sign">Keybase tool</a>.</li>
+		<li>3. Return to is page and paste the message you signed.</li>
+	</ul>
+	<div class="space20"></div>
+	<form>
+		<fieldset>
+			<label><strong>Secret Message</strong></label>
+			<input onClick="this.select();" id="confirm-payload" type="text"/>
+			<textarea id="verify-signed" placeholder="PGP Signed Message"></textarea>
+			<div class="space10"></div>
+			<a id="login-confirm" class="radius button" href="#">Login</a>
+
+		</fieldset>
+</form>
+
+<a class="close-reveal-modal">X</a>
+</div>
+<!-- Modal Section -Login-Confirm -->
 
 <!-- Modal Section -Register -->
 <div id="signupform" class="reveal-modal">
@@ -71,7 +95,7 @@
 		</fieldset>
 	</form>
 
-<a class="close-reveal-modal"><i class="foundicon1-remove"></i></a>
+<a class="close-reveal-modal">X</a>
 </div>
 <!-- Modal Section -Register -->
 
@@ -106,19 +130,8 @@
 <!-- Slider section-->
 
 <div class="clear"></div>
-<div class="space70"></div>
+<div class="space40"></div>
 <div class="clear"></div>
-
-<!-- Twitter Feed content section-->
-<div class="row">
-	<div class="twelve columns">
-		<div class="wrap2" >
-			<h2>Recent Tweets</h2>
-		</div>
-		<div id="tweets">Loading...</div>
-	</div>
-</div>
-<!-- Twitter Feed content section-->
 
 <!-- Features content section-->
 <div class="row">
@@ -130,7 +143,7 @@
 					<div class="features-description">
 						<h5>Open API</h5>
 						<p>Curious as to how we are securing your information? We encourage you to look at our API! </p>
-						<a class="radius button" href="#">View Documentation</a>
+						<a target="_blank" class="radius button" href="http://docs.keybaseapp.com">View Documentation</a>
 					</div>
 				</div>
 
@@ -138,7 +151,7 @@
 					<div class="features-description">
 						<h5>Web App</h5>
 						<p>Need an extra layer of security? Feel free to download our web-app to go.</p>
-						<a class="radius button" href="#">Download Web To-Go</a>
+						<a target="_blank" class="radius button" href="https://github.com/KeybaseApp/ToGo">Download Web To-Go</a>
 					</div>
 				</div>
 

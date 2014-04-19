@@ -55,7 +55,9 @@ p {
 line-height:1.6em;
 font-size:14px;
 }
-
+textarea {
+    resize: none;
+}
 .align-right { float:right; margin: 0 0 5px 10px; }
 
 .align-left { float:left; margin: 0 10px 5px 0; }
@@ -261,6 +263,58 @@ font-size:14px;
 }
 
 /*-----------------------------------------------------------------------------------*/
+/* SEARCH CONTENT STYLES
+/*-----------------------------------------------------------------------------------*/
+
+.user-result {
+	border: none;
+	background: none;
+}
+
+.user-thumbnail {
+  height:50px;
+  width:50px;
+  border-radius:50%;
+  overflow:hidden;
+  margin:auto;
+}
+
+.conversation-name {
+	font-weight: 600;
+	display: inline;
+}
+
+.messages-table {
+	width: 100%;
+	border: none;
+}
+.message-thumbnail {
+  height:50px;
+  width:50px;
+  border-radius:50%;
+  overflow:hidden;
+  margin:auto;
+}
+.message-date {
+	text-align: right;
+}
+.message-image {
+width: 50px;
+}
+
+.conversations-list {
+	margin-top: 10px;
+	width: 100%;
+}
+.user-website {
+white-space: nowrap;
+}
+.user-websites {
+	height: 30px;
+	overflow: scroll;
+}
+}
+/*-----------------------------------------------------------------------------------*/
 /* WRAP2 CONTENT STYLES
 /*-----------------------------------------------------------------------------------*/
 
@@ -402,7 +456,7 @@ ul.social-networks li {
 .rsp-caption h2 {font-size: 140%;margin-top:85%;}
 
 .slider-wrap {
-	background:url(../images/slider_bg.jpg);
+	background-color: #363636;
 	padding-top:0px;
 }
 
@@ -435,7 +489,7 @@ ul.social-networks li {
 .rsp-caption, .rsp-caption h2, .rsp-caption p {display:none;}
 
 .slider-wrap {
-	background:url(../images/slider_bg.jpg);
+	background-color: #363636;
 	padding-top:80px;
 }
 
